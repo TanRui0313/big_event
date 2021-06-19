@@ -1,0 +1,95 @@
+<!--
+ * @Author: TR
+ * @Date: 2021-06-18 16:44:15
+ * @LastEditors: no BUG
+ * @LastEditTime: 2021-06-19 10:38:51
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- 导入 layui 的样式 -->
+  <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
+  <!-- 导入自己的样式 -->
+  <link rel="stylesheet" href="/assets/css/user/user_info.css" />
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <div class="layui-card">
+      <div class="layui-card-header">修改密码</div>
+      <div class="layui-card-body">
+        <form class="layui-form" action="">
+          <div class="layui-form-item">
+            <label class="layui-form-label">原始密码</label>
+            <div class="layui-input-block">
+              <input
+                type="password"
+                name="oldPwd"
+                required
+                lay-verify="required|pwd"
+                placeholder="请输入原密码"
+                autocomplete="off"
+                class="layui-input"
+              />
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">新密码</label>
+            <div class="layui-input-block">
+              <input
+                type="password"
+                name="newPwd"
+                required
+                lay-verify="required|pwd|samePwd"
+                placeholder="请输入新密码"
+                autocomplete="off"
+                class="layui-input"
+              />
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <label class="layui-form-label">确认密码</label>
+            <div class="layui-input-block">
+              <input
+                type="password"
+                name="rePwd"
+                required
+                lay-verify="required|pwd|rePwd"
+                placeholder="请输入新密码"
+                autocomplete="off"
+                class="layui-input"
+              />
+            </div>
+          </div>
+          <div class="layui-form-item">
+            <div class="layui-input-block">
+              <button class="layui-btn" lay-submit lay-filter="formDemo">
+                立即提交
+              </button>
+              <button type="reset" class="layui-btn layui-btn-primary">
+                重置
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- 导入 layui 的 js -->
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <!-- 导入 jquery -->
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- 导入 baseAPI -->
+    <script src="/assets/js/baseAPI.js"></script>
+    <!-- 导入自己的 js -->
+    <script src="/assets/js/user/user_pwd.js"></script>
+  </body>
+</html>
